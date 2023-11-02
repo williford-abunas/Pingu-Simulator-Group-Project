@@ -4,4 +4,9 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-@keyframe 
+.pingu {
+  width: 350px;
+  height: 250px;
+}
+=======
+@keyframe
