@@ -4,21 +4,46 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-@keyframes moveRight {
-  0% {
-    transform: translateX(0);
+
+@keyframes moveRight{
+  0%{
+    transform:translateX(0);
+
   }
-  50% {
-    transform: translate(450px, 300px);
+  50%{
+    transform:translate(450px,300px)
+
   }
-  100% {
-    transform: translateX(0);
+  100%{
+    transform:translateX(0);
   }
 }
+
+
+
+@keyframes movingAndSpinning{
+  0%{
+    transform:translateX(0) rotate(0deg);
+
+  }
+  50%{
+    transform:translate(450px,300px) rotate(180deg);
+
+  }
+  100%{
+    transform:translateX(0) rotate(360deg);
+
+  }
+}
+
 
 .pingu {
   width: 350px;
   height: 250px;
+  animation-name: moveRight;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
 }
 
 /* Page Styling */
@@ -67,5 +92,20 @@ body {
     rgba(0, 0, 0, 1) 73%
   );
   color: white;
-  text-align: center;
+  text-align: center;}
+
+.spinner {
+  animation-name: movingAndSpinning;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
 }
