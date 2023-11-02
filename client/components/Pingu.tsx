@@ -14,23 +14,19 @@ function Pingu() {
     //   ? (img.src = 'client/media/explosion.gif' setTimeout(()=> img.src = 'client/media/pingu2.png',2))
     //   : (img.src = 'client/media/pingu2.png')
     if (!explode) {
-      img.src = 'client/media/explosion.gif';
-    
-      const timeout =setTimeout(() => {
-        
-        img.src = 'client/media/pingu2.png';
-      }, 1000);
-    }
-    else{
+      img.src = 'client/media/explosion.gif'
+
+      const timeout = setTimeout(() => {
+        img.src = 'client/media/pingu2.png'
+      }, 2000)
+    } else {
       // setTimeout(()=>{
       //   console.log("asdf")
       //   return (
       //     img.src = 'client/media/pingu2.png'
       //   )
       // },200)
-      return (
-            img.src = 'client/media/pingu2.png'
-          )
+      return (img.src = 'client/media/pingu2.png')
     }
   }
 
