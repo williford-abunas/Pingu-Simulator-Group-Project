@@ -4,7 +4,9 @@ import { useState, useEffect } from 'react'
 
 function Pingu() {
   const [explode, setExplode] = useState(false)
+  const [spin, setSpin] = useState(false)
   const img = document.getElementById('pingu')
+
   const handleClick = (e: EventTarget) => {
     setExplode(!explode)
     console.log(explode)
@@ -13,13 +15,18 @@ function Pingu() {
       : (img.src = 'client/media/pingu2.png')
   }
 
+  const rightClick = (e) => {
+    e.preventDefault()
+    setSpin(!spin)
+  }
+
   return (
     <div>
       <img
-        style={animationStyles()}
         id="pingu"
-        className="pingu"
+        className={spin === true ? 'spinner' : 'pingu'}
         onClick={handleClick}
+        onContextMenu={rightClick}
         src="client/media/pingu2.png"
         alt="pingu"
       />
