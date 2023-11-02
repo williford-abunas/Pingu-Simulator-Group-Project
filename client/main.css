@@ -3,3 +3,22 @@ body {
   color: #0a1520;
   font-family: 'Poppins', sans-serif;
 }
+
+
+@keyframes moveRight{
+  0%{
+    transform:translateX(0)
+  }
+  50%{
+    transform:translate(450px,300px)
+  }
+  100%{
+    transform:translateX(0)
+  }
+}
+
+.pingu {
+  width: 350px;
+  height: 250px;
+}
+
