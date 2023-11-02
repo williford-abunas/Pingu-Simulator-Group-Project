@@ -19,6 +19,7 @@ function Pingu() {
         src="client/media/pingu2.png"
         alt="pingu"
       />
+      <img src="client/media/pingu4.png" class="pingu" alt="pingu" />
     </div>
   )
 }
