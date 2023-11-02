@@ -1,5 +1,5 @@
 import Pingu from './Pingu'
-import Ball from './Ball'
+// import Ball from './Ball'
 function App() {
   
     return (
@@ -9,7 +9,7 @@ function App() {
           <p>React development has begun!</p>
         </div>
         
-        <Ball />
+        {/* <Ball /> */}
         <Pingu />
       </>
   
