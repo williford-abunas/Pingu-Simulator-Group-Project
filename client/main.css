@@ -4,6 +4,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+
 @keyframes moveRight{
   0%{
     transform:translateX(0)
@@ -15,3 +16,9 @@ body {
     transform:translateX(0)
   }
 }
+
+.pingu {
+  width: 350px;
+  height: 250px;
+}
+
