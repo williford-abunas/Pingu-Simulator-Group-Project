@@ -1,4 +1,8 @@
+
+import { animationStyles } from './Ball'
+
 import { useState, useEffect } from 'react'
+
 
 function Pingu() {
   const [explode, setExplode] = useState(false)
@@ -14,6 +18,7 @@ function Pingu() {
   return (
     <div>
       <img
+        style={animationStyles()}
         id="pingu"
         onClick={handleClick}
         src="client/media/pingu2.png"
