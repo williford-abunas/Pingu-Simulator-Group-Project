@@ -8,9 +8,28 @@ function Pingu() {
   const handleClick = (e: EventTarget) => {
     setExplode(!explode)
     console.log(explode)
-    explode == false
-      ? (img.src = 'client/media/explosion.gif')
-      : (img.src = 'client/media/pingu2.png')
+    // explode == false
+    //   ? (img.src = 'client/media/explosion.gif' setTimeout(()=> img.src = 'client/media/pingu2.png',2))
+    //   : (img.src = 'client/media/pingu2.png')
+    if (!explode) {
+      img.src = 'client/media/explosion.gif';
+    
+      setTimeout(() => {
+        
+        img.src = 'client/media/pingu2.png';
+      }, 1000);
+    }
+    else{
+      // setTimeout(()=>{
+      //   console.log("asdf")
+      //   return (
+      //     img.src = 'client/media/pingu2.png'
+      //   )
+      // },200)
+      return (
+            img.src = 'client/media/pingu2.png'
+          )
+    }
   }
 
   return (
