@@ -14,7 +14,7 @@ function Pingu() {
     if (!explode) {
       img.src = 'client/media/explosion.gif';
     
-      setTimeout(() => {
+      const timeout =setTimeout(() => {
         
         img.src = 'client/media/pingu2.png';
       }, 1000);
