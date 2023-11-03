@@ -6,17 +6,14 @@ import Footer from './Footer.tsx'
 function App() {
   return (
     <>
-      <Header />
       <div className="winterWonderland">
-        <div>
-          <h1>App</h1>
-          <p>React development has begun!</p>
-        </div>
+        <Header />
+        <div></div>
 
         {/* <Ball /> */}
         <Pingu />
+        <Footer />
       </div>
-      <Footer />
     </>
   )
 }

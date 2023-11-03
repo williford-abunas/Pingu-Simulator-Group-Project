@@ -1,41 +1,31 @@
-body {
-  background-color: #faf8f1;
-  color: #0a1520;
-  font-family: 'Poppins', sans-serif;
+@font-face {
+  font-family: 'steelFish';
+  src: url('./media/steelfish.ttf');
 }
 
-
-@keyframes moveRight{
-  0%{
-    transform:translateX(0);
-
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
   }
-  50%{
-    transform:translate(450px,300px)
-
+  50% {
+    transform: translate(450px, 300px);
   }
-  100%{
-    transform:translateX(0);
+  100% {
+    transform: translateX(0);
   }
 }
 
-
-
-@keyframes movingAndSpinning{
-  0%{
-    transform:translateX(0) rotate(0deg);
-
+@keyframes movingAndSpinning {
+  0% {
+    transform: translateX(0) rotate(0deg);
   }
-  50%{
-    transform:translate(450px,300px) rotate(180deg);
-
+  50% {
+    transform: translate(450px, 300px) rotate(180deg);
   }
-  100%{
-    transform:translateX(0) rotate(360deg);
-
+  100% {
+    transform: translateX(0) rotate(360deg);
   }
 }
-
 
 .pingu {
   width: 350px;
@@ -43,14 +33,39 @@ body {
   animation-name: moveRight;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
-  animation-timing-function: linear; 
+  animation-timing-function: linear;
+}
+
+.spinner {
+  animation-name: movingAndSpinning;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Page Styling */
 
 /* background */
+
+body {
+  background-color: #faf8f1;
+  color: #0a1520;
+  font-family: 'Poppins', sans-serif;
+}
+
 .winterWonderland {
   position: fixed;
+  display: flexbox;
+  justify-content: center;
   min-width: 100%;
   min-height: 100%;
   background: linear-gradient(
@@ -66,46 +81,46 @@ body {
 }
 
 .header {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 10%;
-  background-color: red;
-  color: white;
+  display: flexbox;
+  justify-content: center;
+  position: top;
+
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+
   text-align: center;
 }
 
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 20%;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(229, 229, 229, 1) 44%,
-    rgba(232, 229, 143, 1) 57%,
-    rgba(224, 145, 49, 1) 62%,
-    rgba(249, 189, 47, 1) 68%,
-    rgba(0, 0, 0, 1) 73%
-  );
-  color: white;
-  text-align: center;}
-
-.spinner {
-  animation-name: movingAndSpinning;
-  animation-duration: 5000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear; 
+h1 {
+  font: inherit;
+  font-family: steelFish;
+  font-size: 80px;
+  color: black;
+}
+h2 {
+  font: inherit;
+  font-family: steelFish;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
 }
 
-@keyframes spin {
-  from {
-      transform:rotate(0deg);
-  }
-  to {
-      transform:rotate(360deg);
-  }
+.footer {
+  display: flexbox;
+  justify-content: center;
+  position: sticky;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+  left: 0;
+  bottom: 0;
+  width: 60%;
+  height: 10%;
+  background: linear-gradient(
+    to bottom,
+
+    rgba(0, 0, 0, 1) 73%
+  );
+  text-align: center;
 }
