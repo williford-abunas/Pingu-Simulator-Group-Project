@@ -2,7 +2,11 @@ import Pingu from './Pingu'
 import '../main.css'
 import Header from './Header.tsx'
 import Footer from './Footer.tsx'
+
 import { useState } from 'react'
+
+
+
 // import Ball from './Ball'
 function App() {
   const [pinguArr, setPinguArr] = useState([<Pingu />])
@@ -13,12 +17,12 @@ function App() {
     <>
       <div className="winterWonderland">
         <Header />
-        <div></div>
 
         {/* <Ball /> */}
         {[pinguArr]}
 
         <button onClick={makeMore}>Make more characters</button>
+
 
         <Footer />
       </div>
