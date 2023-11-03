@@ -4,6 +4,9 @@ import Header from './Header.tsx'
 import Footer from './Footer.tsx'
 // import Ball from './Ball'
 function App() {
+  function makeMore(){
+    console.log("hoy")
+  }
   return (
     <>
       <Header />
@@ -15,6 +18,7 @@ function App() {
 
         {/* <Ball /> */}
         <Pingu />
+        <button onClick={makeMore}>asdf</button>
       </div>
       <Footer />
     </>
