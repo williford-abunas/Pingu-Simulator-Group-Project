@@ -49,6 +49,8 @@ body {
 
 
 .spinner {
+  width: 350px;
+  height: 250px;
   animation-name: movingAndSpinning;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;

@@ -12,7 +12,7 @@ function Pingu() {
     console.log(explode)
     explode == false
       ? (img.src = 'client/media/explosion.gif')
-      : (img.src = 'client/media/pingu2.png')
+      : (img.src = 'client/media/pingu4.png')
   }
 
   const rightClick = (e) => {
@@ -27,7 +27,7 @@ function Pingu() {
         className={spin === true ? 'spinner' : 'pingu'}
         onClick={handleClick}
         onContextMenu={rightClick}
-        src="client/media/pingu2.png"
+        src="client/media/pingu4.png"
         alt="pingu"
       />
       {/* <img src="client/media/pingu4.png" class="pingu" alt="pingu" /> */}
