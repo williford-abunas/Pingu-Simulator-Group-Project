@@ -9,18 +9,18 @@ function App() {
   }
   return (
     <>
-      <Header />
       <div className="winterWonderland">
-        <div>
-          <h1>App</h1>
-          <p>React development has begun!</p>
-        </div>
+        <Header />
+        <div></div>
 
         {/* <Ball /> */}
         <Pingu />
+
         <button onClick={makeMore}>asdf</button>
+
+        <Footer />
+
       </div>
-      <Footer />
     </>
   )
 }

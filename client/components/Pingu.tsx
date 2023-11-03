@@ -10,6 +10,7 @@ function Pingu() {
   const handleClick = (e: EventTarget) => {
     setExplode(!explode)
     console.log(explode)
+
     // explode == false
     //   ? (img.src = 'client/media/explosion.gif' setTimeout(()=> img.src = 'client/media/pingu2.png',2))
     //   : (img.src = 'client/media/pingu2.png')
@@ -17,16 +18,16 @@ function Pingu() {
       img.src = 'client/media/explosion.gif'
 
       const timeout = setTimeout(() => {
-        img.src = 'client/media/pingu2.png'
+        img.src = 'client/media/pingu4.png'
       }, 2000)
     } else {
       // setTimeout(()=>{
       //   console.log("asdf")
       //   return (
-      //     img.src = 'client/media/pingu2.png'
+      //     img.src = 'client/media/pingu4.png'
       //   )
       // },200)
-      return (img.src = 'client/media/pingu2.png')
+      return (img.src = 'client/media/pingu4.png')
     }
   }
 
@@ -56,7 +57,7 @@ function Pingu() {
         className={spin === true ? 'spinner' : 'pingu'}
         onClick={handleClick}
         onContextMenu={rightClick}
-        src="client/media/pingu2.png"
+        src="client/media/pingu4.png"
         alt="pingu"
         style={{width: "350px",
           height: "250px",
