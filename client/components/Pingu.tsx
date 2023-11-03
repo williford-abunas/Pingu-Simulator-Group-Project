@@ -6,16 +6,31 @@ function Pingu() {
   const [explode, setExplode] = useState(false)
   const [spin, setSpin] = useState(false)
   const img = document.getElementById('pingu')
-
+  const [audio, setAudio] = useState('client/media/sounds/noot.mp3')
+  const sound = new Audio(audio)
+  sound.play()
+  sound.loop = true
+  const timeout = setTimeout(() => {
+    sound.loop = false
+  }, 7000)
+  // sound.addEventListener('canplaythrough', async (event) => {
+  //   /* the audio is now playable; play it if permissions allow */
+  //   await sound.play()
+  //   sound.loop = true
+  //   sound.load()
+  // })
   const handleClick = (e: EventTarget) => {
     setExplode(!explode)
-    console.log(explode)
+    // setAudio()
 
     // explode == false
     //   ? (img.src = 'client/media/explosion.gif' setTimeout(()=> img.src = 'client/media/pingu2.png',2))
     //   : (img.src = 'client/media/pingu2.png')
     if (!explode) {
       img.src = 'client/media/explosion.gif'
+      const explosionSound = new Audio('client/media/sounds/explosion.mp3')
+      explosionSound.volume = 1
+      explosionSound.play()
 
       const timeout = setTimeout(() => {
         img.src = 'client/media/pingu4.png'
@@ -34,6 +49,13 @@ function Pingu() {
   const rightClick = (e) => {
     e.preventDefault()
     setSpin(!spin)
+    sound.loop = false
+    sound.pause()
+    const spinSound = new Audio('client/media/sounds/weee.mp3')
+    spinSound.play()
+
+    // const audio = new Audio('client/media/sounds/explosion.mp3')
+    // audio.play()
   }
 
   return (
@@ -50,5 +72,7 @@ function Pingu() {
     </div>
   )
 }
+
+// Change pingu to random character
 
 export default Pingu
