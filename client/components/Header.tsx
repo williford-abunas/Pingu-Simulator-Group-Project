@@ -1,5 +1,9 @@
 function Header() {
-  return <div className="header">Test for Header div</div>
+  return (
+    <div className="header">
+      <h1> Pingu Simulator </h1>
+    </div>
+  )
 }
 
 export default Header
