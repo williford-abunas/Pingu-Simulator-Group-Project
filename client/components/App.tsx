@@ -5,17 +5,22 @@ import Footer from './Footer.tsx'
 
 // import Ball from './Ball'
 function App() {
+  function makeMore(){
+    console.log("hoy")
+  }
   return (
     <>
       <div className="winterWonderland">
         <Header />
 
-        <div>
-          {/* <Ball /> */}
-          <Pingu />
-        </div>
+        {/* <Ball /> */}
+        <Pingu />
+
+        <button onClick={makeMore}>asdf</button>
+
 
         <Footer />
+
       </div>
     </>
   )

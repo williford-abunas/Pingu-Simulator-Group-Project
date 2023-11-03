@@ -3,17 +3,87 @@
   src: url('./media/steelfish.ttf');
 }
 
-@keyframes moveRight {
-  0% {
-    transform: translateX(0);
+
+@keyframes moveRight{
+  0%{
+    transform:translateX(0);
   }
-  50% {
-    transform: translate(450px, 300px);
+  25%{
+    transform:translate(700px,800px)
   }
-  100% {
-    transform: translateX(0);
+  50%{
+    transform:translate(450px)
+  }
+  75%{
+    transform:translateY(800px)
+  }
+  
+  100%{
+    transform:translateX(0)
+  
   }
 }
+
+@keyframes moveLeft{
+  0%{
+    transform:translateX(700px);
+
+  }
+  25%{
+    transform:translateY(-500px)
+  }
+  50%{
+    transform:translateX(0)
+
+  }
+  75%{
+    transform:translateY(700px)
+  }
+  100%{
+    transform:translateX(700px);
+  }
+}
+
+@keyframes moveUp{
+  0%{
+    transform:translateY(450px);
+
+  }
+  25%{
+    transform:translate(2000px,800px)
+  }
+  50%{
+    transform:translateY(0)
+
+  }
+  75%{
+    transform:translateX(700px)
+  }
+  100%{
+    transform:translateY(450px);
+  }
+}
+
+@keyframes moveDown{
+  0%{
+    transform:translateY(0);
+
+  }
+  25%{
+    transform:translateX(100%)
+  }
+  50%{
+    transform:translateY(450px)
+
+  }
+  75%{
+    transform:translateX(400px)
+  }
+  100%{
+    transform:translateY(0);
+  }
+}
+
 
 @keyframes movingAndSpinning {
   0% {
@@ -27,15 +97,20 @@
   }
 }
 
+
+/* .pingu {
+
 .pingu {
+
   width: 350px;
   height: 250px;
   animation-name: moveRight;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  z-index: 2;
-}
+
+  animation-timing-function: linear; 
+} */
+
 
 .spinner {
   width: 350px;

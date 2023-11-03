@@ -6,7 +6,7 @@ export function animationStyles() {
     height: ping_height,
     width: ping_width,
     background: 'black',
-    animation: `moveRight 2s linear infinite`,
+    animation: `adsf 2s linear infinite`,
   }
 }
 
