@@ -37,20 +37,21 @@
 }
 
 .spinner {
+  width: 350px;
+  height: 250px;
   animation-name: movingAndSpinning;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation-timing-function: linear; 
 }
 
 @keyframes spin {
   from {
-    transform: rotate(0deg);
+      transform:rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+      transform:rotate(360deg);
   }
-}
 
 /* Page Styling */
 
@@ -122,5 +123,5 @@ h2 {
 
     rgba(0, 0, 0, 1) 73%
   );
-  text-align: center;
+
 }
