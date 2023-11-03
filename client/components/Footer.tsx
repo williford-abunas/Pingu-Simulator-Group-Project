@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <div className="footer">
-      <h2>Test for Footer div</h2>
+      <h2>Noot Noot!</h2>
     </div>
   )
 }

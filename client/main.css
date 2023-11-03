@@ -34,6 +34,7 @@
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  z-index: 2;
 }
 
 .spinner {
@@ -61,11 +62,15 @@ body {
   background-color: #faf8f1;
   color: #0a1520;
   font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .winterWonderland {
+  margin: 0;
+  padding: 0;
   position: fixed;
-  display: flexbox;
+  display: inline-block;
   justify-content: center;
   min-width: 100%;
   min-height: 100%;
@@ -110,17 +115,22 @@ h2 {
 .footer {
   display: flexbox;
   justify-content: center;
-  position: sticky;
+  position: bottom;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 0.5rem;
-  left: 0;
-  bottom: 0;
-  width: 60%;
+  width: fit-content;
   height: 10%;
   background: linear-gradient(
     to bottom,
 
     rgba(0, 0, 0, 1) 73%
   );
+  z-index: 4;
+}
+
+.seal {
+  z-index: 5;
+  display: flexbox;
+  justify-content: right;
+  position: top;
 }
