@@ -58,22 +58,19 @@ function Pingu() {
     // audio.play()
   }
   let animationName = ''
-  let random = Math.floor(Math.random()*4)+1
-  if(random === 1){
-    animationName = "moveRight"
-  }
-  else if(random ===2){
-    animationName = "moveLeft"
-  }
-  else if(random === 3){
-    animationName = "moveUp"
-  }
-  else if(random ===4){
-    animationName === "moveDown"
+  const random = Math.floor(Math.random() * 4) + 1
+  if (random === 1) {
+    animationName = 'moveRight'
+  } else if (random === 2) {
+    animationName = 'moveLeft'
+  } else if (random === 3) {
+    animationName = 'moveUp'
+  } else if (random === 4) {
+    animationName === 'moveDown'
   }
   console.log(animationName)
   return (
-    <div>
+    <div className="pinguwrapper">
       <img
         id="pingu"
         className={spin === true ? 'spinner' : 'pingu'}
@@ -81,12 +78,14 @@ function Pingu() {
         onContextMenu={rightClick}
         src="client/media/pingu4.png"
         alt="pingu"
-        style={{width: "350px",
-          height: "250px",
+        style={{
+          width: '350px',
+          height: '250px',
           animationName: animationName,
-          animationDuration: "8000ms",
-          animationIterationCount: "infinite",
-          animationTimingFunction: "linear" }}
+          animationDuration: '8000ms',
+          animationIterationCount: 'infinite',
+          animationTimingFunction: 'linear',
+        }}
       />
       {/* <img src="client/media/pingu4.png" class="pingu" alt="pingu" /> */}
     </div>
