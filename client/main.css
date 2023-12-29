@@ -1,24 +1,219 @@
+@font-face {
+  font-family: 'steelFish';
+  src: url('./media/steelfish.ttf');
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translate(700px, 800px);
+  }
+  50% {
+    transform: translate(450px);
+  }
+  75% {
+    transform: translateY(800px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(700px);
+  }
+  25% {
+    transform: translateY(-500px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateY(700px);
+  }
+  100% {
+    transform: translateX(700px);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(450px);
+  }
+  25% {
+    transform: translate(2000px, 800px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateX(700px);
+  }
+  100% {
+    transform: translateY(450px);
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateY(450px);
+  }
+  75% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes movingAndSpinning {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translate(450px, 300px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+/* .pingu {
+
+.pingu {
+
+  width: 350px;
+  height: 250px;
+  animation-name: moveRight;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+
+  animation-timing-function: linear; 
+} */
+
+.spinner {
+  width: 350px;
+  height: 250px;
+  animation-name: movingAndSpinning !important;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Page Styling */
+
+/* background */
+
 body {
   background-color: #faf8f1;
   color: #0a1520;
   font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-
-@keyframes moveRight{
-  0%{
-    transform:translateX(0)
-  }
-  50%{
-    transform:translate(450px,300px)
-  }
-  100%{
-    transform:translateX(0)
-  }
+.winterWonderland {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  display: inline-block;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 113, 232, 1) 0%,
+    rgba(196, 232, 255, 1) 46%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(237, 237, 237, 1) 52%,
+    rgba(244, 250, 255, 1) 59%,
+    rgba(232, 232, 232, 1) 85%,
+    rgba(196, 196, 196, 1) 100%
+  );
 }
 
-.pingu {
-  width: 350px;
-  height: 250px;
+.header {
+  display: flexbox;
+  justify-content: center;
+  position: top;
+
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+
+  text-align: center;
 }
 
+h1 {
+  font: inherit;
+  font-family: steelFish;
+  font-size: 80px;
+  color: black;
+}
+h2 {
+  font: inherit;
+  font-family: steelFish;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+}
+
+.footer {
+  display: flexbox;
+  justify-content: center;
+  position: bottom;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  height: 10%;
+  background: linear-gradient(
+    to bottom,
+
+    rgba(0, 0, 0, 1) 73%
+  );
+  z-index: 4;
+}
+
+.seal {
+  z-index: 5;
+  display: flexbox;
+  justify-content: right;
+  position: top;
+}
+
+button {
+  position: fixed;
+  bottom: 50px;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: darkred;
+  color: white;
+  right: 50%;
+}
+
+.pinguwrapper {
+  position: fixed;
+  top: auto;
+  right: auto;
+  left: auto;
+  bottom: auto;
+}
